@@ -1,0 +1,26 @@
+1.NUMERIC_TYPES(IMMUTABLE)
+  age = 25          # int
+  price = 19.99     # float
+  coords = 3 + 4j   # complex(real+imaginary part)
+2.TEXT_TYPES(IMMUTABLE)
+  name = 'Alice'
+  multiline = """Line 1
+  Line 2"""
+3.SEQUENCE_TYPES
+  items = ["apple", "banana", "cherry"]  # list(MUTABLE)
+  point = (10.0, 20.0)                   # tuple(IMMUTABLE)
+  numbers = range(0, 10)                 # range(IMMUTABLE)
+4.Mapping_Type(MUTABLE)
+  dict: Unordered (but preserves insertion order in modern Python) collection of unique key-value pairs
+  user = {"id": 101, "role": "admin"}
+5.SET_TYPES
+  unique_ids = {101, 102, 103} (MUTABLE)
+  fixed_set = frozenset([1, 2, 3])(IMMUTABLE)
+6.BOOLEAN_TYPE(IMMUTABLE)
+  is_logged_in = True
+7.NONE_TYPE(IMMUTABLE)
+    result = None
+8.BINARY_TYPE
+    bytearray(MUTABLE)
+    bytes(IMMUTABLE)
+    memoryview(immutale)
