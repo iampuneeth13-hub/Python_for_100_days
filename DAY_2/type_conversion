@@ -1,0 +1,10 @@
+Type Conversion (Casting)You can manually convert variables between types using conversion functions:python
+
+# Convert to integer
+count = int("42")      # Result: 42 (int)
+
+# Convert to float
+pi_val = float("3.14") # Result: 3.14 (float)
+
+# Convert to string
+text = str(100)        # Result: "100" (str)
