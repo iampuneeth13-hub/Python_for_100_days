@@ -1,0 +1,54 @@
+1. Arithmetic Operators
+These perform mathematical operations.
++	Addition	5 + 3	8
+-	Subtraction	5 - 3	2
+*	Multiplication	5 * 3	15
+/	Division	5 / 2	2.5
+//	Floor Division	5 // 2	2
+%	Modulus (Remainder)	5 % 2	1
+**	Exponent (Power)	5 ** 2	25
+
+2.Comparitors
+==
+!=
+<
+>
+>=
+<=
+
+3.Assigning opertaors
+=	  x = 5 	Assign value
++=	x += 2	x = x + 2
+-=	x -= 2	x = x - 2
+*=	x *= 2	x = x * 2
+/=	x /= 2	x = x / 2
+%=	x %= 2	x = x % 2
+
+4. Logical Operators
+Used to combine conditions.
+Operator ---->	Meaning
+and	-----> True if both conditions are true
+or	-----> True if at least one condition is true
+not	-----> Reverses the result
+
+5. Identity Operators
+Check whether two variables refer to the same object.
+Operator	----> Meaning
+is ------>	Same object
+is not	------> Different objects
+
+6. Membership Operators
+Check whether a value exists in a sequence.
+Operator	----> Meaning
+in	---> Value exists
+not in	----> Value does not exist
+
+7. Bitwise Operators (Advanced)
+These work on the binary representation of integers.
+Operator ---->	Meaning
+&	---> AND
+`	----> `
+^	----> XOR
+~	----> NOT
+<<	----> Left shift
+>>	----> Right shift
