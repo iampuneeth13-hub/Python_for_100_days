@@ -1,0 +1,44 @@
+Example 1: Function without Parameters
+def greet():
+    print("Hello, World!")
+
+greet()
+
+Output:
+
+Hello, World!
+
+Example 2: Function with Parameters
+def greet(name):
+    print("Hello,", name)
+
+greet("Alice")
+
+Output:
+
+Hello, Alice
+
+Example 3: Function with Return Value
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(result)
+
+Output:
+
+8
+
+Types of Functions
+1.Built-in Functions – Already provided by Python.
+print("Hello")
+len("Python")
+max(10, 20, 30)
+
+2.User-defined Functions – Created by the programmer.
+def square(x):
+    return x * x
+
+3.Anonymous (Lambda) Functions – Small, unnamed functions.
+square = lambda x: x * x
+print(square(4))
