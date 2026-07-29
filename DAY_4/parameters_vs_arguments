@@ -1,0 +1,44 @@
+Parameters are the variables listed in the function definition.
+Arguments are the actual values passed to the function when it is called.
+def greet(name):    # 'name' is a parameter
+    print("Hello", name)
+
+greet("Alice")      # "Alice" is an argument
+
+1.Multiple Parameters
+def student(name, age):
+    print("Name:", name)
+    print("Age:", age)
+
+student("John", 20)
+
+Output:
+
+Name: John
+Age: 20
+
+2.Default Parameters
+You can provide a default value for a parameter.
+
+def greet(name="Guest"):
+    print("Hello", name)
+
+greet()
+greet("Alice")
+
+Output:
+
+Hello Guest
+Hello Alice
+
+3.Keyword Arguments
+You can specify arguments by parameter name.
+
+def student(name, age):
+    print(name, age)
+
+student(age=20, name="John")
+
+Output:
+
+John 20
