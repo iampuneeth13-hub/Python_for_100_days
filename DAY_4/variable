@@ -1,0 +1,62 @@
+1. Local Variable
+A local variable is created inside a function. It can only be used within that function.
+  Example
+  def display():
+    message = "Hello"
+    print(message)
+  display()
+  Output:Hello
+Here, message is a local variable.
+
+Accessing a Local Variable Outside the Function
+def display():
+    message = "Hello"
+display()
+print(message)
+Output:NameError: name 'message' is not defined
+
+  2. Global Variable
+A global variable is declared outside all functions. It can be accessed from anywhere in the program.
+Example
+name = "Alice"
+def display():
+    print(name)
+display()
+print(name)
+  Output:Alice
+         Alice
+Here, name is a global variable.
+
+Modifying a Global Variable
+To change a global variable inside a function, use the global keyword.
+Example
+count = 10
+def update():
+    global count
+    count = 20
+update()
+print(count)
+Output:20
+
+Without the global keyword, Python creates a new local variable instead of modifying the global one.
+
+Without global
+count = 10
+def update():
+    count = 20
+    print(count)
+update()
+print(count)
+Output:20
+       10
+
+  Local and Global Variables Together
+x = 100
+def test():
+    x = 50
+    print("Inside function:", x)
+test()
+print("Outside function:", x)
+Output:
+Inside function: 50
+Outside function: 100
