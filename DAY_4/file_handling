@@ -1,0 +1,41 @@
+Function/Mode	Purpose
+open()	Opens a file
+read()	Reads the entire file
+readline()	Reads one line
+readlines()	Reads all lines as a list
+write()	Writes data to a file
+close()	Closes the file
+with open()	Opens and automatically closes the file
+"r"	Read mode
+"w"	Write mode
+"a"	Append mode
+"x"	Create a new file
+
+Mode	Description
+"r"	Read (default). Error if file doesn't exist.
+"w"	Write. Creates a new file or overwrites an existing one.
+"a"	Append. Adds data to the end of the file.
+"x"	Create a new file. Error if it already exists.
+"r+"	Read and write.
+"w+"	Write and read (overwrites existing content).
+"a+"	Append and read.
+
+Checking if a File Exists
+import os
+if os.path.exists("sample.txt"):
+    print("File exists")
+else:
+    print("File not found")
+
+Complete Example
+# Write to a file
+with open("student.txt", "w") as file:
+    file.write("John\n")
+    file.write("Alice\n")
+
+# Read the file
+with open("student.txt", "r") as file:
+    print(file.read())
+Output:
+John
+Alice
