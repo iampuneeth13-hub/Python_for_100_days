@@ -1,0 +1,96 @@
+Exception Handling in Python
+Exception handling is used to handle runtime errors so that a program does not crash unexpectedly.
+
+Python provides the try, except, else, finally, and raise statements for exception handling.
+
+Exception	Description
+ZeroDivisionError	Division by zero
+ValueError	Invalid value
+TypeError	Invalid data type
+NameError	Undefined variable
+IndexError	List index out of range
+KeyError	Dictionary key not found
+FileNotFoundError	File does not exist
+
+Example
+try:
+    num = 10 / 0
+    print(num)
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+Output
+Cannot divide by zero.
+
+Handling Multiple Exceptions
+You can use multiple except blocks to handle different types of errors.
+
+try:
+    number = int(input("Enter a number: "))
+    result = 10 / number
+    print(result)
+except ValueError:
+    print("Please enter a valid integer.")
+except ZeroDivisionError:
+    print("Division by zero is not allowed.")
+
+    The else Block
+The else block executes only if no exception occurs.
+Example
+try:
+    number = int(input("Enter a number: "))
+    print(100 / number)
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+else:
+    print("Operation completed successfully.")
+Input
+5
+Output
+20.0
+Operation completed successfully.
+
+The finally Block
+The finally block executes whether an exception occurs or not.
+It is commonly used to close files or release resources.
+Example
+try:
+    file = open("sample.txt", "r")
+    print(file.read())
+except FileNotFoundError:
+    print("File not found.")
+finally:
+    print("Program finished.")
+Output (if the file does not exist)
+File not found.
+Program finished.
+
+The raise Statement
+Use raise to create your own exception.
+Example
+age = -5
+if age < 0:
+    raise ValueError("Age cannot be negative.")
+Output
+ValueError: Age cannot be negative.
+
+Complete Example
+try:
+    num1 = int(input("Enter first number: "))
+    num2 = int(input("Enter second number: "))
+    result = num1 / num2
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+except ValueError:
+    print("Invalid input.")
+else:
+    print("Result:", result)
+finally:
+    print("Program execution completed.")
+
+Summary
+Keyword	Purpose
+try	Contains code that may raise an exception
+except	Handles the exception
+else	Runs if no exception occurs
+finally	Always runs, whether an exception occurs or not
+raise	Raises a custom exception
