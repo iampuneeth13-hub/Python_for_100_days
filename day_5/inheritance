@@ -1,0 +1,42 @@
+Encapsulation
+Encapsulation means bundling data and the methods that operate on that data inside a class, while controlling how that data is accessed or changed.
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance
+
+    def deposit(self, amount):
+        self.__balance += amount
+
+    def get_balance(self):
+        return self.__balance
+
+account = BankAccount(1000)
+
+account.deposit(500)
+
+print(account.get_balance())
+
+Output:
+1500
+
+Here:
+__balance → private-like data
+deposit() → controls how money is added
+get_balance() → provides controlled access to the balance
+
+Because of the double underscore:
+self.__balance
+
+you shouldn't directly access it like:
+account.__balance   because name mangling makes it look like account._BankAccount__balance
+
+Python will generally raise an AttributeError.
+
+Example 2
+class Parent:
+    def __init__(self):
+        self.__value = 10
+class Child(Parent):
+    def __init__(self):
+        super().__init__()
+        self.__value = 20
