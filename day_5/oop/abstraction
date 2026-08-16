@@ -1,0 +1,21 @@
+What is abstraction?
+Abstraction means hiding complicated details and showing only what the user needs to use.
+
+class Car:
+    def start(self):
+        self._check_engine()
+        self._inject_fuel()
+        self._start_engine()
+
+    def _check_engine(self):
+        print("Checking engine...")
+
+    def _inject_fuel(self):
+        print("Injecting fuel...")
+
+    def _start_engine(self):
+        print("Engine started!")
+As the user, you just do:
+
+car = Car()
+car.start()
