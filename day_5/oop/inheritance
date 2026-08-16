@@ -1,0 +1,17 @@
+
+inheritence with encapsulation
+class Parent:
+    def __init__(self):
+        self.__value = 10
+class Child(Parent):
+    def __init__(self):
+        super().__init__()
+        self.__value = 20
+
+child=Child()
+print(child._Parent__value)
+print(child._Child__value)
+
+output:
+10
+20
