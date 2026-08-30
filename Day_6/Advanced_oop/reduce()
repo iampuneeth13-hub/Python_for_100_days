@@ -1,0 +1,23 @@
+reduce()
+reduce() repeatedly combines values to produce a single result.
+
+It comes from:
+from functools import reduce
+
+numbers = [1, 2, 3, 4, 5]
+result = reduce(lambda a, b: a + b, numbers)
+print(result)
+Output:
+15
+
+Conceptually:
+1 + 2 = 3
+3 + 3 = 6
+6 + 4 = 10
+10 + 5 = 15
+
+numbers = [1, 2, 3, 4, 5]
+result = reduce(lambda a, b: a * b, numbers)
+print(result)
+Output:
+120
