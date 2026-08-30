@@ -1,0 +1,47 @@
+List comprehensions provide a concise way of creating lists.
+Normal code:
+numbers = []
+for i in range(1, 6):
+    numbers.append(i * i)
+print(numbers)
+
+List comprehension:
+numbers = [i * i for i in range(1, 6)
+print(numbers)
+Output:
+[1, 4, 9, 16, 25]
+With condition
+Find even numbers:
+numbers = [1, 2, 3, 4, 5, 6]
+even = [x for x in numbers if x % 2 == 0]
+print(even)
+Output:
+[2, 4, 6]
+General structure:
+[expression for item in iterable if condition]
+
+
+
+Dictionary Comprehension
+Example:
+numbers = [1, 2, 3, 4, 5]
+squares = {x: x * x for x in numbers}
+print(squares)
+Output:
+{
+    1: 1,
+    2: 4,
+    3: 9,
+    4: 16,
+    5: 25
+}
+This is useful for transforming data.
+
+
+
+Set Comprehension
+numbers = [1, 2, 2, 3, 3, 4]
+result = {x * 2 for x in numbers}
+print(result)
+Output will contain unique values:
+{2, 4, 6, 8}
