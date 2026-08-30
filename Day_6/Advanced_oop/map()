@@ -1,0 +1,23 @@
+map()
+map() applies a function to every item in an iterable.
+
+suupose:
+numbers = [1, 2, 3, 4, 5]
+
+We want squares.
+
+Traditional approach:
+result = []
+for n in numbers:
+    result.append(n * n)
+print(result)
+
+Using map():
+numbers = [1, 2, 3, 4, 5]
+result = map(lambda x: x * x, numbers)
+print(list(result))
+
+Output:
+[1, 4, 9, 16, 25]
+
+map() returns an iterator, so we commonly convert it to a list.
