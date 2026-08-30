@@ -1,0 +1,24 @@
+**kwargs
+kwargs means keyword arguments.
+def person(**kwargs):
+    print(kwargs)
+person(name="John", age=25, city="Bangalore")
+Output:
+{'name': 'John', 'age': 25, 'city': 'Bangalore'}
+
+kwargs is a dictionary.
+
+def person(**kwargs):
+    print(kwargs["name"])
+person(name="John", age=25)
+
+Using both:
+def test(*args, **kwargs):
+    print(args)
+    print(kwargs)
+test(10, 20, 30, name="John", age=25)
+Output:
+(10, 20, 30)
+{'name': 'John', 'age': 25}
+
+This becomes especially useful when you start working with frameworks, decorators, APIs, and reusable functions.
