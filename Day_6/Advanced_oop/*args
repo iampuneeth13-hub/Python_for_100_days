@@ -1,0 +1,30 @@
+*args and **kwargs
+These are extremely important when working with functions.
+
+*args
+Suppose you don't know how many arguments a function will receive.
+def add(a, b):
+    return a + b
+
+This only accepts two arguments.
+Instead:
+
+def add(*args):
+    return sum(args)
+print(add(1, 2))
+print(add(1, 2, 3))
+print(add(1, 2, 3, 4, 5))
+Output:
+3
+6
+15
+
+Inside the function, args is a tuple:
+
+def test(*args):
+    print(args)
+    print(type(args))
+test(10, 20, 30)
+Output:
+(10, 20, 30)
+<class 'tuple'>
