@@ -1,0 +1,37 @@
+Lambda Functions
+A lambda is a small anonymous function.
+Normal function:
+def square(x):
+    return x * x
+
+Lambda:
+square = lambda x: x * x
+
+Then:
+print(square(5))
+
+Output:
+25
+
+The syntax is:
+lambda arguments: expression
+
+For example:
+add = lambda a, b: a + b
+print(add(10, 20))
+Output:
+30
+
+Lambda becomes particularly useful with sorted(), map(), and filter().
+
+Example:
+students = [
+    ("John", 80),
+    ("Alice", 95),
+    ("Bob", 70)
+]
+students.sort(key=lambda student: student[1])
+print(students)
+
+The lambda tells Python:
+Sort according to the second value of each tuple.
