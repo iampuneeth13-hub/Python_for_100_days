@@ -1,0 +1,30 @@
+An iterable is an object that can be iterated over.
+Examples:
+list
+tuple
+string
+set
+dictionary
+
+Example without iterator:
+numbers = [10, 20, 30]
+for number in numbers:
+    print(number)numbers = [10, 20, 30]
+iterator = iter(numbers)
+print(next(iterator))
+print(next(iterator))
+print(next(iterator))
+
+Output:
+10
+20
+30
+
+Calling next() again:
+print(next(iterator))
+
+will produce:
+StopIteration
+
+Iterable vs Iterator
+Iterable Can provide an iterator.
