@@ -1,0 +1,54 @@
+Programs can encounter errors.
+9try:
+    a = 10
+    b = 0
+
+    print(a / b)
+
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+try, except, else, finally
+try
+
+Code that may generate an exception.
+try, except, else, finally
+
+try:
+    number = int(input("Enter number: "))
+except ValueError:
+    print("Please enter a valid integer")
+else:
+    print("You entered:", number)
+finally:
+    print("Execution completed")
+
+Raising Exceptions
+You can deliberately generate an exception using raise.
+age = 15
+if age < 18:
+    raise ValueError("Age must be 18 or above")
+Output:
+ValueError: Age must be 18 or above
+
+This is useful for enforcing rules.
+
+Custom Exceptions
+You can create your own exception class.
+
+class InsufficientBalanceError(Exception):
+    pass
+Then:
+balance = 500
+withdraw = 1000
+if withdraw > balance:
+    raise InsufficientBalanceError("Insufficient balance")
+
+You can catch it:
+
+try:
+    if withdraw > balance:
+        raise InsufficientBalanceError("Insufficient balance")
+except InsufficientBalanceError as e:
+    print(e)
+
+This becomes especially useful in large applications.
