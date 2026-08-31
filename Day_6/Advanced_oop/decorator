@@ -1,0 +1,20 @@
+Decorators
+A decorator allows you to modify or extend a function without changing its original code.
+Basic Decorator
+def decorator(func):
+    def wrapper():
+        print("Before function")
+        func()
+        print("After function")
+    return wrapper
+
+@decorator
+def greet():
+    print("Hello")
+
+greet()
+
+Output:
+Before function
+Hello
+After function
