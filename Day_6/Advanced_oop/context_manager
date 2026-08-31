@@ -1,0 +1,41 @@
+with open("data.txt", "r") as file:
+    data = file.read()
+
+The with statement is using a context manager.
+
+Why is it useful?
+Because resources should be properly released.
+
+For example:
+file = open("data.txt")
+try:
+    data = file.read()
+finally:
+    file.close()
+
+With a context manager:
+with open("data.txt") as file:
+    data = file.read()
+
+Python automatically handles closing the file.
+
+Creating Your Own Context Manager
+A class can implement:
+__enter__()
+__exit__()
+
+Example:
+
+class MyContext:
+    def __enter__(self):
+        print("Entering context")
+        return self
+    def __exit__(self, exc_type, exc_value, traceback):
+        print("Leaving context")
+with MyContext():
+    print("Inside context")
+
+Output:
+Entering context
+Inside context
+Leaving context
