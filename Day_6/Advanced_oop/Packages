@@ -1,0 +1,18 @@
+A package is a collection of modules.
+
+Example:
+
+project/
+│
+├── main.py
+│
+└── utilities/
+    ├── __init__.py
+    ├── math_utils.py
+    └── string_utils.py
+
+Then:
+
+from utilities.math_utils import add
+
+Packages help organize large applications.
