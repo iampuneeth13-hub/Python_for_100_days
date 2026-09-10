@@ -1,0 +1,23 @@
+A module is simply a Python file containing reusable code.
+Suppose you create:
+math_utils.py
+
+Inside:
+def add(a, b):
+    return a + b
+def subtract(a, b):
+    return a - b
+
+Another file:
+main.py
+You can import it:
+
+import math_utils
+print(math_utils.add(10, 20))
+Import Specific Functions
+from math_utils import add
+print(add(10, 20))
+
+You can also rename:
+from math_utils import add as addition
+print(addition(10, 20))
