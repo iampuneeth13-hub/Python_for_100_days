@@ -1,0 +1,19 @@
+pip
+pip is Python's package installer.
+
+For example:
+pip install requests
+
+Then:
+
+import requests
+
+Other popular packages include:
+
+numpy
+pandas
+flask
+django
+fastapi
+pytest
+beautifulsoup4
