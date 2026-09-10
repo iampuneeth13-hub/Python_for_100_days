@@ -1,0 +1,24 @@
+Suppose:
+def add(a, b):
+    return a + b
+print("Hello")
+
+When another file imports this module:
+import math_utils
+the print("Hello") statement also executes.
+
+To prevent this:
+def add(a, b):
+    return a + b
+if __name__ == "__main__":
+    print("Hello")
+
+Now "Hello" executes only when that file is run directly.
+
+For example:
+python math_utils.py
+will execute the block.
+
+But:
+import math_utils
+will not execute it.
